@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactRouter from 'react-router-dom'
 
 class App extends React.Component {
 
@@ -29,13 +30,11 @@ class App extends React.Component {
         {this.state.menuModalOpen &&
           <div id="menu_modal">
             <nav>
-              <ul>
-                <li>Home</li>
-                <li>Publications</li>
-                <li>About</li>
-              </ul>
+              <a>Home</a>
+              <a>Publications</a>
+              <a>About</a>
+              <button onClick={() => this.toggleMenu()}>Close Menu</button>
             </nav>
-            <button onClick={() => this.toggleMenu()}>Close Menu</button>
           </div>
         }
       </>

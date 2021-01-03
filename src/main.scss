@@ -18,14 +18,22 @@ body {
     color: white;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 
     nav {
       display: flex;
-      width: 96%;
-      max-width: 400px;
-      border-left: .2rem solid white;
-      border-bottom: .2rem solid white;
       flex-basis: 100%;
+      flex-wrap: wrap;
+      // longest page name 'publications' is 12 letters. so the margin should be a min of 1/15 the viewport width, i.e. 6.7vw
+      margin-left: calc(min(6.7vw, 50px));
+      margin-top: calc(min(5vw, 40px));
+      align-content: flex-start;
+
+      a {
+        // again, longest page name is 12 letters. let's say each letter should be about 1/13 the screen width. by trial and error (because font-size denotes letter height), we reach 3vw
+        font-size: calc(min(7vw, 10rem));
+        flex-basis: 100%;
+      }
     }
   }
 
