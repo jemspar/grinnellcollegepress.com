@@ -1,0 +1,13 @@
+pages:
+  -
+    slug: publications
+    title: Publications
+    content: publications.mdx
+  -
+    slug: about
+    title: About
+    content: about.mdx
+  -
+    slug: ""
+    title: false
+    content: home.mdx

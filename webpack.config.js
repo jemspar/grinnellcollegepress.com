@@ -53,9 +53,6 @@ module.exports = {
           },
           {
             loader: '@mdx-js/loader'
-          },
-          {
-            loader: path.join(__dirname, './lib/fm-loader')
           }
         ]
       },

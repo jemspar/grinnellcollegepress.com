@@ -33,6 +33,12 @@ body {
         // again, longest page name is 12 letters. let's say each letter should be about 1/13 the screen width. by trial and error (because font-size denotes letter height), we reach 3vw
         font-size: calc(min(7vw, 10rem));
         flex-basis: 100%;
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+          border-bottom: 1px solid white;
+        }
       }
     }
   }
@@ -41,6 +47,7 @@ body {
     background-color: rgb(230,230,230);
     color: black;
     display: flex;
+    min-height: 100vh;
     justify-content: center;
     flex-wrap: wrap;
     padding-left: calc(max(50% - 300px,2%));

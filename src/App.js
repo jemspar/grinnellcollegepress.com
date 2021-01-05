@@ -1,5 +1,17 @@
 import React from 'react'
-import ReactRouter from 'react-router-dom'
+
+import {Helmet} from 'react-helmet'
+import {
+  NavLink,
+  Link,
+  Switch,
+  Route
+} from 'react-router-dom'
+
+// page data
+import pageData from './pages/page_data.yaml'
+
+import Page from './Page'
 
 class App extends React.Component {
 
@@ -20,19 +32,37 @@ class App extends React.Component {
 
     return(
       <>
+        <Helmet>
+          <title>{this.state.subtitle ?
+          this.state.subtitle + " – Grinnell College Press" :
+          "Grinnell College Press" }</title>
+        </Helmet>
+
         <div id="content">
           <h1 id="title">Grinnell College Press</h1>
           <button onClick={() => this.toggleMenu()}>
             Open Menu
           </button>
+          <Switch>
+            {pageData.pages.map((page, index) =>
+              <Route
+              path={"/" + page.slug}>
+                <Page page={page} />
+              </Route>
+            )}
+          </Switch>
         </div>
 
         {this.state.menuModalOpen &&
           <div id="menu_modal">
             <nav>
-              <a>Home</a>
-              <a>Publications</a>
-              <a>About</a>
+              {pageData.pages.map((page, index) => {
+                if(page.title) {
+                  return <NavLink key={index} to={"/" + page.slug}>{page.title}</NavLink>
+                } else {
+                  return <NavLink key={index} exact to="/">Home</NavLink>
+                }
+              })}
               <button onClick={() => this.toggleMenu()}>Close Menu</button>
             </nav>
           </div>
