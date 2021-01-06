@@ -27,6 +27,12 @@ class App extends React.Component {
     this.setState({menuModalOpen: !this.state.menuModalOpen});
   }
 
+  handlePageChange(props) {
+    this.setState({
+      subtitle: props.subtitle,
+      menuModalOpen: false
+    });
+  }
 
   render() {
 
@@ -40,33 +46,33 @@ class App extends React.Component {
 
         <div id="content">
           <h1 id="title">Grinnell College Press</h1>
-          <button onClick={() => this.toggleMenu()}>
+          <button onClick={() => {this.toggleMenu()}}>
             Open Menu
           </button>
           <Switch>
             {pageData.pages.map((page, index) =>
               <Route
               path={"/" + page.slug}>
-                <Page page={page} />
+                <Page page={page}
+                onPageChange={(pageInfo) => {this.handlePageChange(pageInfo)} }/>
               </Route>
             )}
           </Switch>
         </div>
 
-        {this.state.menuModalOpen &&
-          <div id="menu_modal">
-            <nav>
-              {pageData.pages.map((page, index) => {
-                if(page.title) {
-                  return <NavLink key={index} to={"/" + page.slug}>{page.title}</NavLink>
-                } else {
-                  return <NavLink key={index} exact to="/">Home</NavLink>
-                }
-              })}
-              <button onClick={() => this.toggleMenu()}>Close Menu</button>
-            </nav>
-          </div>
-        }
+        <div id="menu_modal" className={this.state.menuModalOpen ? "active" : undefined}>
+          <nav>
+            {pageData.pages.map((page, index) => {
+              if(page.title) {
+                return <NavLink key={index} to={"/" + page.slug}>{page.title}</NavLink>
+              } else {
+                return <NavLink key={index} exact to="/">Home</NavLink>
+              }
+            })}
+            <button onClick={() => {this.toggleMenu()}}>Close Menu</button>
+          </nav>
+        </div>
+
       </>
 
     )

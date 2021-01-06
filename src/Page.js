@@ -3,8 +3,8 @@ import React from 'react'
 class Page extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.slug != this.props.page.slug) {
-      // this.props.onPageChange(this.props.page.title);
+    if (prevProps.page.slug != this.props.page.slug) {
+      this.props.onPageChange({subtitle: this.props.page.title});
     }
   }
 
