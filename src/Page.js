@@ -3,13 +3,15 @@ import React from 'react'
 class Page extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.page.slug != this.props.page.slug) {
-      this.props.onPageChange({subtitle: this.props.page.title});
+    if (prevProps.page.url != this.props.page.url) {
+      this.props.onPageChange({
+        subtitle: this.props.page.title
+      });
     }
   }
 
   render() {
-    // const Content = require("./pages/" + this.props.page.content);
+    const Content = require("./pages/" + this.props.page.content);
 
     return(
       <>

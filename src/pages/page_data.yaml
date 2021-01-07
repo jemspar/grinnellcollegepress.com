@@ -1,13 +1,19 @@
 pages:
   -
-    slug: publications
+    url: /publications
     title: Publications
     content: publications.mdx
   -
-    slug: about
+    url: /about
     title: About
     content: about.mdx
   -
-    slug: ""
+    url: /
     title: false
+    navTitle: "Home"
     content: home.mdx
+
+nav:
+  - /
+  - /publications
+  - /about

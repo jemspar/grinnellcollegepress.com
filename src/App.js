@@ -29,8 +29,8 @@ class App extends React.Component {
 
   handlePageChange(props) {
     this.setState({
-      subtitle: props.subtitle,
-      menuModalOpen: false
+      menuModalOpen: false,
+      subtitle: props.subtitle
     });
   }
 
@@ -52,7 +52,7 @@ class App extends React.Component {
           <Switch>
             {pageData.pages.map((page, index) =>
               <Route
-              path={"/" + page.slug}>
+              path={page.url}>
                 <Page page={page}
                 onPageChange={(pageInfo) => {this.handlePageChange(pageInfo)} }/>
               </Route>
@@ -62,13 +62,17 @@ class App extends React.Component {
 
         <div id="menu_modal" className={this.state.menuModalOpen ? "active" : undefined}>
           <nav>
-            {pageData.pages.map((page, index) => {
-              if(page.title) {
-                return <NavLink key={index} to={"/" + page.slug}>{page.title}</NavLink>
-              } else {
-                return <NavLink key={index} exact to="/">Home</NavLink>
-              }
-            })}
+            {pageData.nav.map((link, index) => {
+              let page = pageData.pages.find( element => element.url === link );
+              // if the tabTitle is defined, use that. otherwise, use the title.
+              // this allows the home page to be called 'Home' but also have no tab subtitle
+              return(
+                <NavLink to={link}>
+                  {"navTitle" in page ? page.navTitle : page.title}
+                </NavLink>
+              )
+            }
+            )}
             <button onClick={() => {this.toggleMenu()}}>Close Menu</button>
           </nav>
         </div>
