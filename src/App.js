@@ -9,9 +9,13 @@ import {
 } from 'react-router-dom'
 
 // page data
-import pageData from './pages/page_data.yaml'
+import pageData from './data/page_data.yaml'
 
+// Pages
 import Page from './Page'
+// --------
+import Home from './pages/Home'
+import Publications from './pages/Publications'
 
 class App extends React.Component {
 
@@ -44,21 +48,23 @@ class App extends React.Component {
           "Grinnell College Press" }</title>
         </Helmet>
 
-        <div id="content">
+        <main>
           <h1 id="title">Grinnell College Press</h1>
           <button onClick={() => {this.toggleMenu()}}>
             Open Menu
           </button>
           <Switch>
-            {pageData.pages.map((page, index) =>
-              <Route
-              path={page.url}>
-                <Page page={page}
-                onPageChange={(pageInfo) => {this.handlePageChange(pageInfo)} }/>
-              </Route>
-            )}
+
+            <Route exact path="/">
+              <Page><Home /></Page>
+            </Route>
+
+            <Route exact path="/publications">
+              <Page><Publications /></Page>
+            </Route>
+
           </Switch>
-        </div>
+        </main>
 
         <div id="menu_modal" className={this.state.menuModalOpen ? "active" : undefined}>
           <nav>
@@ -67,7 +73,7 @@ class App extends React.Component {
               // if the tabTitle is defined, use that. otherwise, use the title.
               // this allows the home page to be called 'Home' but also have no tab subtitle
               return(
-                <NavLink to={link}>
+                <NavLink to={link} onClick={() => {this.toggleMenu()}}>
                   {"navTitle" in page ? page.navTitle : page.title}
                 </NavLink>
               )

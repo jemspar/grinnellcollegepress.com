@@ -3,24 +3,21 @@ import React from 'react'
 class Page extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.page.url != this.props.page.url) {
+    if (prevProps.title != this.props.title) {
       this.props.onPageChange({
-        subtitle: this.props.page.title
+        subtitle: this.props.title
       });
     }
   }
 
   render() {
-    const Content = require("./pages/" + this.props.page.content);
-
-    return(
-      <>
-        {this.props.page.title &&
-          <h1>{this.props.page.title}</h1>
+    return (
+      <div id="content">
+        {this.props.title &&
+          <h1>{this.props.title}</h1>
         }
-        {// <Content />
-        }
-      </>
+        {this.props.children}
+      </div>
     )
   }
 

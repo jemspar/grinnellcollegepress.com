@@ -2,16 +2,13 @@ pages:
   -
     url: /publications
     title: Publications
-    content: publications.mdx
   -
     url: /about
     title: About
-    content: about.mdx
   -
     url: /
     title: false
-    navTitle: "Home"
-    content: home.mdx
+    navTitle: Home
 
 nav:
   - /

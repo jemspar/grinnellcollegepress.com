@@ -64,7 +64,7 @@ body {
     }
   }
 
-  #content {
+  main {
     background-color: rgb(230,230,230);
     color: black;
     display: flex;
@@ -78,6 +78,10 @@ body {
       font-size: 3rem;
       flex-basis: 100%;
       text-align: center;
+    }
+
+    #content {
+      flex-basis: 100%;
     }
   }
 
