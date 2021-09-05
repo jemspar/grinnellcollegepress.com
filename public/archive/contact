@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact | Grinnell College Press</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="/archive/style.css" />
+    <script src="/archive/jquery-3.3.1.js"></script>
+    <script src="/archive/jquery.transit.min.js"></script>
+    <script src="/archive/menu.js"></script>
+</head>
+
+<body>
+        <div id="menu-button">
+                <svg viewbox="0 0 100 100">
+                    <rect x="5" y="5" width="90" height="90"
+                    style="fill:none;stroke:black;stroke-width:10" />
+                    Sorry, your browser does not support inline SVG.
+                </svg>
+            </div>
+            
+            <div id="menu-label">MENU</div>
+            
+            <div id="main-menu">
+                <a href="/archive/publications">publications</a><br>
+                <a href="/archive/about">about</a><br>
+                <a href="/archive/contact">contact</a><br>
+                <a href="/archive/submit">submit</a><br>
+            </div>
+            
+            <div id="logo"><a href="/archive/"><img width="100%" src="/archive/logo.svg"></a></div>
+            
+            <div id="topbar-bg"></div>
+    
+            <div id="page">
+                <h1>Contact</h1>
+<h2>Email – <a href="mailto:press@grinnell.edu">press@grinnell.edu</a></h2>
+<p>Jeremy Sparagon<br>
+    <i>Editor-in-chief</i>
+</p>
+<p>Hannah Bentley<br>
+    <i>Editor</i>
+</p>
+<p>Waverly Eichhorst<br>
+    <i>Editor</i>
+</p>
+<p>Oona Miller<br>
+    <i>Editor</i>
+</p>
+<p>Nora Paul<br>
+    <i>Editor</i>
+</p>
+<p>Zainab Thompson<br>
+    <i>Editor</i>
+</p>
+            </div>
+</body>
+</html>

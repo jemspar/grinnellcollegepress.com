@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ page.title }} | Grinnell College Press</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{site.url}}/style.css" />
+    <script src="{{site.url}}/jquery-3.3.1.js"></script>
+    <script src="{{site.url}}/jquery.transit.min.js"></script>
+    <script src="{{site.url}}/menu.js"></script>
+</head>
+
+<body>
+        <div id="menu-button">
+                <svg viewbox="0 0 100 100">
+                    <rect x="5" y="5" width="90" height="90"
+                    style="fill:none;stroke:black;stroke-width:10" />
+                    Sorry, your browser does not support inline SVG.
+                </svg>
+            </div>
+            
+            <div id="menu-label">MENU</div>
+            
+            <div id="main-menu">
+                <a href="{{site.url}}/publications">publications</a><br>
+                <a href="{{site.url}}/about">about</a><br>
+                <a href="{{site.url}}/contact">contact</a><br>
+                <a href="{{site.url}}/submit">submit</a><br>
+            </div>
+            
+            <div id="logo"><a href="{{site.url}}/"><img width="100%" src="{{site.url}}/logo.svg"></a></div>
+            
+            <div id="topbar-bg"></div>
+    
+            <div id="page">
+                {{ content }}
+            </div>
+</body>
+</html>
