@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  margin: 0;
+  background-color: rgba(20,20,20,1);
+  color: white;
+  font-size: 24px;
+  font-family: 'Arimo', sans-serif;
+}
+
+main {
+  max-width: 500px;
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+	width: 80%;
+	max-width: 200px;
+	margin-top: 4rem;
+}
+
+.row {
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+
+}
+.row:first-of-type {
+ margin-top: 3rem;
+}
+
+.label {
+  font-family: serif;
+  font-size: 1rem;
+  flex-basis: 50%;
+  letter-spacing: .05rem;
+  color: rgba(230,240,240,0.7);
+  transition: 0.5s;
+
+}
+.row:hover .label {
+  color:rgba(210,220,220,1);
+  transition: 0.5s;
+}
+
+
+.value {
+  font-family: monospace;
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: .25rem;
+  flex-basis: 50%;
+  text-align: right;
+}
+
+/* NAVIGATION */
+
+header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px white;
+}
+
+nav {
+	position: sticky;
+	top: 0;
+	padding-top: 3ch;
+}
+
+nav a.nav-button {
+  text-transform: uppercase;
+  font-size: .7rem;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid white;
+  padding: 2px;
+  margin-left: 5px;
+  margin-right: 5px;
+}

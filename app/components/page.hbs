@@ -1,0 +1,18 @@
+<header>
+	<img class="logo" src="../assets/logo.svg" />
+
+	<nav>
+		<LinkTo class="f6 link dim br1 ba ph3 pv2 mb2 dib white" @route="index">Home</LinkTo>
+			<LinkTo class="f6 link dim br1 ba ph3 pv2 mb2 dib white" @route="about">About</LinkTo>
+			<LinkTo class="f6 link dim br1 ba ph3 pv2 mb2 dib white" @route="contact">Contact</LinkTo>
+		
+	</nav>
+	
+</header>
+
+
+<main>
+
+	{{ yield }}
+
+</main>

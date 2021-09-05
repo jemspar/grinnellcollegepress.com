@@ -1,0 +1,29 @@
+<main>
+
+	<div class="logo"></div>
+	
+	<div class="row">
+		<div class="label">
+			Author
+		</div>
+		<div class="value">
+			Nora Paul
+		</div>
+	</div>
+	<div class="row">
+		<div class="label">
+			Title
+		</div>
+		<div class="value">
+			Empty Landscapes
+		</div>
+	</div>
+	<div class="row">
+		<div class="label">
+			Released
+		</div>
+		<div class="value">
+			Fall 2018
+		</div>
+	</div>
+</main>
