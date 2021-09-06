@@ -13,6 +13,7 @@ main {
   width: 96%;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 50px;
 }
 
 .logo {
@@ -33,7 +34,7 @@ main {
 }
 
 .label {
-  font-family: serif;
+  /* font-family: serif; */
   font-size: 1rem;
   flex-basis: 50%;
   letter-spacing: .05rem;
@@ -82,4 +83,17 @@ nav a.nav-button {
   padding: 2px;
   margin-left: 5px;
   margin-right: 5px;
+  color: white;
+}
+
+a {
+  color: rgb(150,150,255);
+}
+
+a:visited {
+  color: rgb(200,100,255);
+}
+/* override for tachyons link */
+a.white {
+  color:white;
 }
